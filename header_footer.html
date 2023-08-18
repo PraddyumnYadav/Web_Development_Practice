@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header and Footer</title>
+    <style>
+        body {
+            background-image: url("background.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        * {
+            color: white;
+        }
+
+        p {
+            font-size: 22px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #2abb97;
+        }
+
+        li {
+            float: left;
+            padding-top: 10px;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* Change the link color to #111 (black) on hover */
+        li a:hover {
+            background-color: #111;
+        }
+
+        div.image {
+            text-align: right;
+            padding-top: 4px;
+        }
+
+        h1 {
+            font-size: 50px;
+            color: blue;
+        }
+
+        div.container {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        p.heading {
+            font-size: 60px;
+        }
+
+        div.sided-item {
+            display: flex;
+        }
+
+        div.sided-item div p {
+            margin: 0;
+        }
+
+        div#footer {
+            padding-top: 50px;
+            padding-bottom: 50px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><pre> </pre></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">The Crew</a></li>
+        <li><a href="#">This is How we Roll</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <div class="image">
+            <img src="icon.png" alt="Icon">
+        </div>
+    </ul>
+    <div class="container">
+        <h1>THIS IS HOW WE ROLL.</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab reiciendis sit sunt delectus, provident
+            laudantium, alias commodi id enim voluptatibus non dolore ipsam consequuntur? Voluptatum laborum explicabo
+            enim quod quibusdam qui quaerat error quidem. Accusamus neque nobis veritatis autem beatae aperiam iusto
+            nulla aut illo dicta saepe, accusantium odio exercitationem tempore. Hic, asperiores perferendis? Itaque
+            quia inventore ea incidunt in? Eius modi excepturi vero nulla accusantium? Iste dolorum architer</p>
+
+        <div class="sided-item">
+            <img src="nature-photography-picture.webp" alt="Natural Image">
+            <div style="padding-left: 50px;">
+                <p style="font-size: 40px;">What's an Event Without Fun?</p>
+                <br>
+                <p class="heading"><b> We </b></p>
+                <p class="heading"><b> Design </b></p>
+                <p class="heading"><b> Fun </b></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="sided-item">
+            <div class="sided-item">
+                <div class="container">
+                    <h4>Quick Link</h4>
+                    <li>Home</li>
+                    <li>The Crew</li>
+                    <li>Services</li>
+                    <li>This is how we Roll.</li>
+                    <li>Contact us</li>
+                    <li>Terms and Conditions</li>
+                    <li>Privacy Policy</li>
+                </div>
+                <div class="container">
+                    <h4>Head Office</h4>
+                    <li>Industrial Assurance Building Ground Floor, Veer Nariman Road Opposite Churchgate Station
+                        Churchgate, Mumbai 400 020</li>
+                    <li>+91-9833280044</li>
+                    <li>ops@fastturtlesolutions.com</li>
+                </div>
+            </div>
+            <div class="container">
+                <img src="Footer Image.png" alt="Location">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
