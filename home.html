@@ -85,53 +85,82 @@
             margin-bottom: 5px;
             color: white;
         }
+
+        .subnav-items {
+            display: none;
+            position: absolute;
+            background-color: #2abb97;
+            min-width: 160px;
+            z-index: 1;
+            padding-top: 20px;
+        }
+
+        .subnav:hover .subnav-items {
+            display: block;
+        }
+
+        .subnav-items a {
+            float: none;
+            padding: 10px 16px;
+            text-align: left;
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+
+        .subnav-items a:hover {
+            background-color: #111;
+        }
     </style>
 </head>
 
 <body>
-    <nav>
-        <ul id="top-header">
-            <li>
-                <pre> </pre>
-            </li>
-            <li>
-                <pre> </pre>
-            </li>
-            <li>ops@fastturtlesolutions.com</li>
-            <li>
-                <pre> </pre>
-            </li>
-            <li>
-                <pre> </pre>
-            </li>
-            <li><b>|</b></li>
-            <li>
-                <pre> </pre>
-            </li>
-            <li>
-                <pre> </pre>
-            </li>
-            <li>+91-9833280044</li>
-            <div class="image">
-                <img src="Icon-Tray.png" alt="Social Media Icons">
+    <ul id="top-header">
+        <li>
+            <pre> </pre>
+        </li>
+        <li>
+            <pre> </pre>
+        </li>
+        <li>ops@fastturtlesolutions.com</li>
+        <li>
+            <pre> </pre>
+        </li>
+        <li>
+            <pre> </pre>
+        </li>
+        <li><b>|</b></li>
+        <li>
+            <pre> </pre>
+        </li>
+        <li>
+            <pre> </pre>
+        </li>
+        <li>+91-9833280044</li>
+        <div class="image">
+            <img src="Icon-Tray.png" alt="Social Media Icons">
+        </div>
+    </ul>
+    <ul>
+        <li>
+            <pre> </pre>
+        </li>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="crew.html">The Crew</a></li>
+        <li><a href="how_we_roll.html">This is How we Roll</a></li>
+        <li class="subnav">
+            <a href="services.html">Services</a>
+            <div class="subnav-items">
+                <a href="#"> Event Management</a>
+                <a href="#"> BTL Activations</a>
+                <a href="#"> MICE</a>
             </div>
-        </ul>
-    </nav>
-    <nav>
-        <ul>
-            <li>
-                <pre> </pre>
-            </li>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="crew.html">The Crew</a></li>
-            <li><a href="how_we_roll.html">This is How we Roll</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <div class="image">
-                <img src="icon.png" alt="Icon">
-            </div>
-        </ul>
-    </nav>
+        </li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <div class="image">
+            <img src="icon.png" alt="Icon">
+        </div>
+    </ul>
     <div class="container">
         <h1>INTRODUCTION TO FASTURTLE SOLUTIONS.</h1>
         <p>
