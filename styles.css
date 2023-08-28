@@ -12,6 +12,9 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #2abb97;
+    padding-left: 50px;
+    padding-right: 50px;
+    /* position: sticky; */
 }
 
 ul li {
@@ -69,17 +72,18 @@ div#footer {
     background-image: url("background.webp");
     background-repeat: no-repeat;
     background-size: cover;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 #top-header {
     background-color: blue;
     padding-top: 9px;
-    margin-bottom: 5px;
     color: white;
 }
 
 .subnav-items {
-    display: none;
+    display: block;
     position: absolute;
     background-color: #2abb97;
     min-width: 160px;
@@ -87,8 +91,8 @@ div#footer {
     padding-top: 20px;
 }
 
-.subnav:hover .subnav-items {
-    display: block;
+.subnav:not(:hover) .subnav-items {
+    display: none;
 }
 
 .subnav-items a {
