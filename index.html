@@ -13,18 +13,27 @@
     <link rel="stylesheet" href="dist/output.css">
 </head>
 
-<body>
-    <nav class="sticky top-0 flex bg-cyan-400">
+<body class="dark:bg-black dark:text-white">
+    <nav class="sticky top-0 flex bg-green-400">
         <img id="image" onclick="hide()" class="md:hidden h-12 w-12 my-3 mr-auto ml-2 cursor-pointer" src="settings.svg" alt="">
-        <ul id="navbar" class="hidden md:flex md:space-x-8 md:py-6 px-3 md:mx-auto font-bold uppercase text-gray-600 border-black border-2">
-            <li class="cursor-pointer border-black border-2">Home</li>
-            <li class="cursor-pointer border-black border-2">The Crew</li>
-            <li class="cursor-pointer border-black border-2">About Us</li>
-            <li class="cursor-pointer border-black border-2">Services</li>
-            <li class="cursor-pointer border-black border-2">This is how we Roll</li>
+        <ul class="hidden md:flex md:space-x-8 md:py-6 px-3 md:mx-auto font-bold uppercase text-gray-600">
+            <li class="cursor-pointer">Home</li>
+            <li class="cursor-pointer">The Crew</li>
+            <li class="cursor-pointer">About Us</li>
+            <li class="cursor-pointer">Services</li>
+            <li class="cursor-pointer">This is how we Roll</li>
         </ul>
         <img class="ml-auto md:mx-auto py-1 mr-2" src="icon.png" alt="Fasturtle Solutions">
     </nav>
+    <div>
+        <ul id="navbar" class="hidden font-bold uppercase bg-green-600">
+            <li class="cursor-pointer py-3 mx-3">Home</li>
+            <li class="cursor-pointer py-3 mx-3">The Crew</li>
+            <li class="cursor-pointer py-3 mx-3">About Us</li>
+            <li class="cursor-pointer py-3 mx-3">Services</li>
+            <li class="cursor-pointer py-3 mx-3">This is how we Roll</li>
+        </ul>
+    </div>
 
     <div class="main mx-10 sm:mx-20 my-10">
         <h1 class="text-5xl font-extrabold uppercase">This is How we Roll</h1>
@@ -57,7 +66,7 @@
                 <li>Privacy Policy</li>
             </ul>
         </div>
-        <div class="px-10 py-10">
+        <div class="px-10 py-10 from-green-400">
             <h1 class="font-bold text-2xl">Head Office</h1>
             <ul>
                 <li>Industrial Assurance Building Ground Floor, Veer Nariman Road Opposite Churchgate Station Churchgate, Mumbai 400 020</li>
@@ -79,7 +88,6 @@
             }
             else {
                 navbar.style.display = 'block';
-
             }
         }
     </script>
