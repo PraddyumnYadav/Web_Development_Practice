@@ -37,13 +37,23 @@
             </ul>
         </div>
 
-        <div class="slider-carousel bg-white">
-            <img class="w-1/2 h-96 mx-auto py-10 block" id="img1" src="Images/Slider_IMG/1.jpg" alt="Slider 1">
-            <img class="w-1/2 h-96 mx-auto py-10 hidden" id="img2" src="Images/Slider_IMG/2.jpg" alt="Slider 2">
-            <img class="w-1/2 h-96 mx-auto py-10 hidden" id="img3" src="Images/Slider_IMG/3.jpg" alt="Slider 3">
-            <img class="w-1/2 h-96 mx-auto py-10 hidden" id="img4" src="Images/Slider_IMG/4.jpg" alt="Slider 4">
-            <img class="w-1/2 h-96 mx-auto py-10 hidden" id="img5" src="Images/Slider_IMG/5.jpg" alt="Slider 5">
+        <div class="slider-carousel bg-white" style="overflow: hidden;">
+            <div id="image-container" style="display: flex; transition: transform 0.5s ease; width: 100%;">
+                <img class="w-1/2 h-96 mx-[25%] py-10 block" id="img1" src="Images/Slider_IMG/1.jpg" alt="Slider 1"
+                    style="flex: 0 0 50%;">
+                <img class="w-1/2 h-96 mx-[25%] py-10 block" id="img2" src="Images/Slider_IMG/2.jpg" alt="Slider 2"
+                    style="flex: 0 0 50%;">
+                <img class="w-1/2 h-96 mx-[25%] py-10 block" id="img3" src="Images/Slider_IMG/3.jpg" alt="Slider 3"
+                    style="flex: 0 0 50%;">
+                <img class="w-1/2 h-96 mx-[25%] py-10 block" id="img4" src="Images/Slider_IMG/4.jpg" alt="Slider 4"
+                    style="flex: 0 0 50%;">
+                <img class="w-1/2 h-96 mx-[25%] py-10 block" id="img5" src="Images/Slider_IMG/5.jpg" alt="Slider 5"
+                    style="flex: 0 0 50%;">
+            </div>
         </div>
+
+
+
 
         <div class="main mx-10 sm:mx-20 my-10">
             <h1 class="text-5xl font-extrabold uppercase">This is How we Roll</h1>
@@ -164,32 +174,24 @@
         openModalAfterDelay();
     </script>
     <script>
-        const img1 = document.getElementById("img1");
-        const img2 = document.getElementById("img2");
-        const img3 = document.getElementById("img3");
-        const img4 = document.getElementById("img4");
-        const img5 = document.getElementById("img5");
-
-        const images = [img1, img2, img3, img4, img5];
+        const imageContainer = document.getElementById("image-container");
+        const images = Array.from(imageContainer.children);
         let currentIndex = 0;
 
         function changeImage() {
-            // Hide the current image
-            images[currentIndex].classList.add('hidden');
+            // Calculate the new transform
+            const newTransform = `translateX(-${currentIndex * 100}%)`;
+
+            // Apply the new transform
+            imageContainer.style.transform = newTransform;
 
             // Increment the index (loop back to the first image if at the end)
             currentIndex = (currentIndex + 1) % images.length;
-
-            // Show the next image
-            images[currentIndex].classList.remove('hidden');
         }
 
         // Change the image every 5 seconds (5000 milliseconds)
         setInterval(changeImage, 5000);
     </script>
-
-
-
 </body>
 
 </html>
