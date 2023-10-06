@@ -39,16 +39,16 @@
 
         <div class="slider-carousel bg-white" style="overflow: hidden;">
             <div id="image-container" style="display: flex; transition: transform 0.5s ease; width: 100%;">
-                <img class="sm:w-1/2 sm:h-96 sm:mx-[25%] sm:py-10 block" id="img1" src="Images/Slider_IMG/1.jpg" alt="Slider 1"
-                    style="flex: 0 0 50%;">
-                <img class="sm:w-1/2 sm:h-96 sm:mx-[25%] sm:py-10 block" id="img2" src="Images/Slider_IMG/2.jpg" alt="Slider 2"
-                    style="flex: 0 0 50%;">
-                <img class="sm:w-1/2 sm:h-96 sm:mx-[25%] sm:py-10 block" id="img3" src="Images/Slider_IMG/3.jpg" alt="Slider 3"
-                    style="flex: 0 0 50%;">
-                <img class="sm:w-1/2 sm:h-96 sm:mx-[25%] sm:py-10 block" id="img4" src="Images/Slider_IMG/4.jpg" alt="Slider 4"
-                    style="flex: 0 0 50%;">
-                <img class="sm:w-1/2 sm:h-96 sm:mx-[25%] sm:py-10 block" id="img5" src="Images/Slider_IMG/5.jpg" alt="Slider 5"
-                    style="flex: 0 0 50%;">
+                <img class="sm:w-1/2 sm:h-96 sm:mx-[25%] sm:py-10 block" id="img1" src="Images/Slider_IMG/1.jpg"
+                    alt="Slider 1" style="flex: 0 0 50%;">
+                <img class="sm:w-1/2 sm:h-96 sm:mx-[25%] sm:py-10 block" id="img2" src="Images/Slider_IMG/2.jpg"
+                    alt="Slider 2" style="flex: 0 0 50%;">
+                <img class="sm:w-1/2 sm:h-96 sm:mx-[25%] sm:py-10 block" id="img3" src="Images/Slider_IMG/3.jpg"
+                    alt="Slider 3" style="flex: 0 0 50%;">
+                <img class="sm:w-1/2 sm:h-96 sm:mx-[25%] sm:py-10 block" id="img4" src="Images/Slider_IMG/4.jpg"
+                    alt="Slider 4" style="flex: 0 0 50%;">
+                <img class="sm:w-1/2 sm:h-96 sm:mx-[25%] sm:py-10 block" id="img5" src="Images/Slider_IMG/5.jpg"
+                    alt="Slider 5" style="flex: 0 0 50%;">
             </div>
         </div>
 
@@ -191,6 +191,35 @@
 
         // Change the image every 5 seconds (5000 milliseconds)
         setInterval(changeImage, 5000);
+    </script>
+
+    <script>
+        function Trigger_Notification() {
+            // Check if the browser supports the Notification API
+            if ("Notification" in window) {
+                // Request permission to show notifications
+                Notification.requestPermission().then(function (permission) {
+                    if (permission === "granted") {
+                        // Create a new notification
+                        var notification = new Notification("Hello, World!", {
+                            body: "If You are Enjoying the Experience of this Website then contact me for any of Your Freelancing Work Related to Web Development.",
+                            icon: "./Images/icon.png", // Optional: You can specify an icon
+                        });
+
+                        // Handle click event on the notification
+                        notification.onclick = function () {
+                            console.log("Notification clicked");
+                            // You can add custom behavior here when the notification is clicked.
+                        };
+                    } else {
+                        console.log("Permission denied for notifications");
+                    }
+                });
+            } else {
+                console.log("Notification API not supported in this browser");
+            }
+        }
+        setTimeout(Trigger_Notification, 5000); // Trigger Notifications on 5 seconds of opening the Website
     </script>
 </body>
 
